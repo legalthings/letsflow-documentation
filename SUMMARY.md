@@ -12,11 +12,11 @@
 
 ## REST API
 
-* [REST API](rest-api/README.md)
-  * [Event Chain service](rest-api/event-chain-service.md)
-  * [Workflow Engine](rest-api/workflow-engine.md)
-  * [API client libraries](rest-api/api-client-libraries.md)
-  * [Identity](rest-api/identity.md)
+* [REST API](rest-api/rest-api/README.md)
+  * [Event Chain service](rest-api/rest-api/event-chain-service.md)
+  * [Workflow Engine](rest-api/rest-api/workflow-engine.md)
+  * [API client libraries](rest-api/rest-api/api-client-libraries.md)
+  * [Identity](rest-api/rest-api/identity.md)
 
 ## Reference
 
@@ -34,7 +34,6 @@
   * [HTTP trigger](reference/trigger/http-trigger.md)
   * [NOP trigger](reference/trigger/nop-trigger.md)
   * [Event trigger](reference/trigger/event-trigger.md)
-
 
 ## Advanced topics
 

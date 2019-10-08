@@ -261,7 +261,7 @@ For this tutorial we'll send an e-mail through Mailgun using their REST API.
 * Add your e-mail address to 'Authorized Recipients' and verify it.
 {% endhint %}
 
-![](../../.gitbook/assets/screenshot-app.mailgun.com-2019.05.28-03-43-38.png)
+![](https://github.com/legalthings/letsflow-docs/tree/5e7119b40d462ce903c4f7e2c396b0986e295a1b/.gitbook/assets/screenshot-app.mailgun.com-2019.05.28-03-43-38.png)
 
 {% hint style="info" %}
 This tutorial uses `sandbox000.mailgun.org` as endpoint, a dummy API key and `jane.wong@example.com` as e-mail address. Replace that with the \(long\) sandbox URL, your Mailgun API key and your own e-mail address.

@@ -4,7 +4,7 @@ description: Triggers send are used for automated actions.
 
 # Trigger
 
-### Configuring custom actions to use trigger
+## Configuring custom actions to use trigger
 
 ```yaml
 triggers:
@@ -16,7 +16,7 @@ triggers:
     projection: "{body: {name: name, amount: quantity * price }}"
 ```
 
-### Using a custom action
+## Using a custom action
 
 {% tabs %}
 {% tab title="YAML" %}

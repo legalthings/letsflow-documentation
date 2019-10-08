@@ -18,7 +18,6 @@ responses:
   error:
     display: always
     title: Failed to add the license holder
-
 ```
 {% endtab %}
 

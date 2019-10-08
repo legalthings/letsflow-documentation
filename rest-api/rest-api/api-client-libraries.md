@@ -2,7 +2,7 @@
 
 ## JavaScript
 
-{% embed url="https://github.com/legalthings/lto-api.js" %}
+{% embed url="https://github.com/legalthings/lto-api.js" caption="" %}
 
 ```javascript
 npm install lto-api --save
@@ -15,11 +15,9 @@ const lto = new LTO();
 
 ## PHP
 
-{% embed url="https://github.com/legalthings/lto-api.php" %}
+{% embed url="https://github.com/legalthings/lto-api.php" caption="" %}
 
 ```text
 composer require lto/api
 ```
-
-
 

@@ -250,7 +250,6 @@ states:
       transition: ":success"
     - response: reject
       transition: ":cancelled"
-
 ```
 {% endtab %}
 

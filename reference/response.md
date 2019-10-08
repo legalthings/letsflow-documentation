@@ -23,7 +23,6 @@ data:
   email: john@example.com
   product: kettle washed jeans
   quantity: 700
-
 ```
 {% endtab %}
 

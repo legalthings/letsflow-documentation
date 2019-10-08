@@ -127,7 +127,7 @@ Running this test will fail, because the process is completed and not in the _wa
 
 We'll change the scenario, so an actor can only introduce himself/herself if the actor's name is unknown.
 
-We can add a `condition` to an action. The condition is always interpreted as boolean. With [data instructions](../../full-node/workflow/scenario/data-instruction.md) like `<eval>`, the condition can be determined based on process data.
+We can add a `condition` to an action. The condition is always interpreted as boolean. With [data instructions](https://github.com/legalthings/letsflow-docs/tree/5e7119b40d462ce903c4f7e2c396b0986e295a1b/full-node/workflow/scenario/data-instruction.md) like `<eval>`, the condition can be determined based on process data.
 
 {% tabs %}
 {% tab title="YAML" %}

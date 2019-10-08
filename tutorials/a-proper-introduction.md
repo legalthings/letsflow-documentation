@@ -328,7 +328,7 @@ states:
 
 Once we know the name of the actor, we can use it in the process. Rather than saying "Reply to the initiator", we could say "Reply to Joe Smith".
 
-The [`<tpl>` data instruction](../../full-node/workflow/scenario/data-instruction.md) parses a mustache template, injecting process data.
+The [`<tpl>` data instruction](https://github.com/legalthings/letsflow-docs/tree/5e7119b40d462ce903c4f7e2c396b0986e295a1b/full-node/workflow/scenario/data-instruction.md) parses a mustache template, injecting process data.
 
 {% tabs %}
 {% tab title="YAML" %}
