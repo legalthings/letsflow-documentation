@@ -337,7 +337,7 @@ The _introduce_ action can already be performed by both actors in the initial st
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-$schema: "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#"
+$schema: "https://specs.letsflow.io/v0.2.0/scenario/schema.json#"
 title: Under one condition
 
 actors:
@@ -380,7 +380,7 @@ states:
 {% tab title="JSON" %}
 ```javascript
 {
-    "$schema": "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#",
+    "$schema": "https://specs.letsflow.io/v0.2.0/scenario/schema.json#",
     "title": "A proper introduction",
     "actors": {
         "initiator": {

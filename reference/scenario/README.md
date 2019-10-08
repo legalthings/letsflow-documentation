@@ -68,7 +68,7 @@ If the supplier starts the process, the golden flow is
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-$schema: "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#"
+$schema: "https://specs.letsflow.io/v0.2.0/scenario/schema.json#"
 id: JKdf3jddfklsr834s312
 title: Product quotation
 description: Send a quotation requested by the client
@@ -256,16 +256,16 @@ states:
 {% tab title="JSON" %}
 ```javascript
 {
-  "$schema": "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#",
+  "$schema": "https://specs.letsflow.io/v0.2.0/scenario/schema.json#",
   "id": "JKdf3jddfklsr834s312",
   "title": "Product quotation",
   "description": "Send a quotation requested by the client",
   "actors": {
     "supplier": {
-      "$ref": "https://specs.livecontracts.io/v0.2.0/actor/schema.json#organization"
+      "$ref": "https://specs.letsflow.io/v0.2.0/actor/schema.json#organization"
     },
     "client": {
-      "$ref": "https://specs.livecontracts.io/v0.2.0/actor/schema.json#individual"
+      "$ref": "https://specs.letsflow.io/v0.2.0/actor/schema.json#individual"
     }
   },
   "assets": {
@@ -542,16 +542,16 @@ states:
 {% tab title="JSON \(full\)" %}
 ```javascript
 {
-  "$schema": "https://specs.livecontracts.io/v0.1.0/scenario/schema.json#",
+  "$schema": "https://specs.letsflow.io/v0.1.0/scenario/schema.json#",
   "id": "JKdf3jddfklsr834s312",
   "title": "Product quotation",
   "description": "Send a quotation requested by the client",
   "actors": {
     "supplier": {
-      "$ref": "https://specs.livecontracts.io/v0.1.0/actor/schema.json#organization"
+      "$ref": "https://specs.letsflow.io/v0.1.0/actor/schema.json#organization"
     },
     "client": {
-      "$ref": "https://specs.livecontracts.io/v0.1.0/actor/schema.json#individual"
+      "$ref": "https://specs.letsflow.io/v0.1.0/actor/schema.json#individual"
     }
   },
   "assets": {
@@ -568,7 +568,7 @@ states:
       }
     },
     "quotation": {
-      "$ref": "https://specs.livecontracts.io/v0.1.0/document/schema.json#"
+      "$ref": "https://specs.letsflow.io/v0.1.0/document/schema.json#"
     }
   },
   "definitions": {
@@ -703,7 +703,7 @@ states:
           "update": {
             "select": "assets.quotation",
             "data": {
-              "$schema": "https://specs.livecontracts.io/v0.1.0/document/schema.json#",
+              "$schema": "https://specs.letsflow.io/v0.1.0/document/schema.json#",
               "name": {
                 "<tpl>": "Quotation {{ actors.client.name }} {{ response.date }}"
               },
@@ -857,7 +857,7 @@ states:
 
 ## Scenario schema
 
-`https://specs.livecontracts.io/v0.2.0/scenario/schema.json#`
+`https://specs.letsflow.io/v0.2.0/scenario/schema.json#`
 
 ### $schema
 

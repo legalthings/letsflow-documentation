@@ -85,7 +85,7 @@ or
 
 ## State Schema
 
-`https://specs.livecontracts.io/v0.2.0/scenario/schema.json#state`
+`https://specs.letsflow.io/v0.2.0/scenario/schema.json#state`
 
 ### title
 
@@ -134,7 +134,7 @@ Dynamic [transitions](state.md#transition-schema) from this state to the next.
 
 ## Transition schema
 
-`https://specs.livecontracts.io/v0.2.0/scenario/schema.json#transition`
+`https://specs.letsflow.io/v0.2.0/scenario/schema.json#transition`
 
 A transition defines the change from one state to the next. State transition definitions are more dynamic than the transition you can set in the response object.
 

@@ -14,7 +14,7 @@ Sending a response must be done by adding an event with a response resource to t
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-$schema: https://specs.livecontracts.io/v0.2.0/response/schema.json#
+$schema: https://specs.letsflow.io/v0.2.0/response/schema.json#
 process: 234jashaj3ljk34jkala
 action: request_quote
 response: ok
@@ -29,7 +29,7 @@ data:
 {% tab title="JSON" %}
 ```javascript
 {
-  "$schema": "https://specs.livecontracts.io/v0.2.0/response/schema.json#",
+  "$schema": "https://specs.letsflow.io/v0.2.0/response/schema.json#",
   "process": "234jashaj3ljk34jkala",
   "action": "request_quote",
   "data": {

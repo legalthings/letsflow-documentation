@@ -28,9 +28,9 @@ actors:
         type: string
         format: email
       identity:
-        $ref: "https://specs.livecontracts.io/v0.2.0/identity/schema.json#"
+        $ref: "https://specs.letsflow.io/v0.2.0/identity/schema.json#"
   employee:
-    $ref: "https://specs.livecontracts.io/v0.2.0/actor/schema.json#employee"
+    $ref: "https://specs.letsflow.io/v0.2.0/actor/schema.json#employee"
 ```
 {% endtab %}
 
@@ -46,7 +46,7 @@ actors:
           "type": "string"
         },
         "identity": {
-          "$ref": "https://specs.livecontracts.io/v0.2.0/identity/schema.json#"
+          "$ref": "https://specs.letsflow.io/v0.2.0/identity/schema.json#"
         }        
       }
     },
@@ -63,7 +63,7 @@ Properties that aren't defined don't exist and can't be set, unless `additionalP
 
 ## Actor schema
 
-`https://specs.livecontracts.io/v0.2.0/actor/schema.json#`
+`https://specs.letsflow.io/v0.2.0/actor/schema.json#`
 
 ### $schema
 

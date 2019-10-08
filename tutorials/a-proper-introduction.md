@@ -42,7 +42,7 @@ Feature: Two actors meet at a conference and exchange information.
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-$schema: "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#"
+$schema: "https://specs.letsflow.io/v0.2.0/scenario/schema.json#"
 title: A proper introduction
 
 actors:
@@ -72,7 +72,7 @@ states:
 {% tab title="JSON" %}
 ```javascript
 {
-    "$schema": "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#",
+    "$schema": "https://specs.letsflow.io/v0.2.0/scenario/schema.json#",
     "title": "A proper introduction",
     "actors": {
         "initiator": {
@@ -116,7 +116,7 @@ We define the actors in the scenario using [JSON schema](https://json-schema.org
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-$schema: "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#"
+$schema: "https://specs.letsflow.io/v0.2.0/scenario/schema.json#"
 title: A proper introduction
 
 actors:
@@ -221,7 +221,7 @@ Adding an `update` property to an action or response will update the selected ob
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-$schema: "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#"
+$schema: "https://specs.letsflow.io/v0.2.0/scenario/schema.json#"
 title: A proper introduction
 
 actors:
@@ -267,7 +267,7 @@ states:
 {% tab title="JSON" %}
 ```javascript
 {
-    "$schema": "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#",
+    "$schema": "https://specs.letsflow.io/v0.2.0/scenario/schema.json#",
     "title": "A proper introduction",
     "actors": {
         "initiator": {

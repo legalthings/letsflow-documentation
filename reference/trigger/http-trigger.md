@@ -5,7 +5,7 @@ HTTP Trigger sends an http request to a specified url
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-$schema: https://specs.livecontracts.io/v0.2.0/action/http/schema.json#
+$schema: https://specs.letsflow.io/v0.2.0/action/http/schema.json#
 title: Step1
 url: http://example.com
 method: "POST"
@@ -20,7 +20,7 @@ actor: system
 {% tab title="JSON" %}
 ```javascript
 {
-  "$schema": "https://specs.livecontracts.io/v0.2.0/action/http/schema.json#",
+  "$schema": "https://specs.letsflow.io/v0.2.0/action/http/schema.json#",
   "title": "Step1",
   "url": "http://example.com",
   "method": "POST",

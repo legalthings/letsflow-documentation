@@ -11,7 +11,7 @@ Processes need to be explicitly started via an event with a process resource. Th
 {% tabs %}
 {% tab title="YAML" %}
 ```text
-$schema: "https://specs.livecontracts.io/v0.2.0/process/schema.json#"
+$schema: "https://specs.letsflow.io/v0.2.0/process/schema.json#"
 id: 3jlsf98ajk3j254nsdl
 scenario: f098231jklasdj231
 actors:
@@ -23,7 +23,7 @@ actors:
 {% tab title="JSON" %}
 ```javascript
 {
-  "$schema": "https://specs.livecontracts.io/v0.2.0/process/schema.json#",
+  "$schema": "https://specs.letsflow.io/v0.2.0/process/schema.json#",
   "id": "3jlsf98ajk3j254nsdl",
   "scenario": "f098231jklasdj231",
   "actors": {
@@ -43,7 +43,7 @@ Identities that aren't set when the process is instantiated need to be set via a
 
 ## Process schema
 
-`https://specs.livecontracts.io/v0.2.0/process/schema.json#`
+`https://specs.letsflow.io/v0.2.0/process/schema.json#`
 
 ### $schema
 
@@ -93,7 +93,7 @@ A set of immutable assets copied from the scenario. The keys are used to referen
 
 ## Current state schema
 
-`https://specs.livecontracts.io/v0.2.0/process/schema.json#current-state`
+`https://specs.letsflow.io/v0.2.0/process/schema.json#current-state`
 
 The current state object is similar to the state as defined in the schema. However the `actions` property contains full actions, not just keys.
 

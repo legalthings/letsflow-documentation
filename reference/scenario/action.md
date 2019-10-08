@@ -8,7 +8,7 @@ An action is something that can be performed by actor or the node of an actor. A
 {% tab title="YAML" %}
 ```yaml
 issue:
-  "$schema": https://specs.livecontracts.io/v0.2.0/action/schema.json
+  "$schema": https://specs.letsflow.io/v0.2.0/action/schema.json
   actor: issuer
   responses:
     ok:
@@ -24,7 +24,7 @@ issue:
 ```javascript
 {
   "issue": {
-    "$schema": "https://specs.livecontracts.io/v0.2.0/action/schema.json",
+    "$schema": "https://specs.letsflow.io/v0.2.0/action/schema.json",
     "actor": "issuer",
     "responses": {
       "ok": {
@@ -48,7 +48,7 @@ issue:
 
 ## Action schema
 
-`https://specs.livecontracts.io/v0.2.0/action/schema.json`
+`https://specs.letsflow.io/v0.2.0/action/schema.json`
 
 ### $schema
 
@@ -86,7 +86,7 @@ Should the action be displayed in the history? Choose one of the following optio
 
 ## Response schema
 
-`https://specs.livecontracts.io/v0.1.0/scenario/schema.json#response`
+`https://specs.letsflow.io/v0.1.0/scenario/schema.json#response`
 
 Instructions for a response of an action.
 
@@ -114,7 +114,7 @@ The value must be the key of an action listed in the actions array.
 
 ## Update instruction schema
 
-`https://specs.livecontracts.io/v0.1.0/scenario/schema.json#update-instruction`
+`https://specs.letsflow.io/v0.1.0/scenario/schema.json#update-instruction`
 
 After a response is given, the projection of the process may be updated. Update instructions can update the process information, assets or actors.
 

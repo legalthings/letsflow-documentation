@@ -17,7 +17,7 @@ Let's expand the scenario for a process where two actors greet each other. We st
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-$schema: "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#"
+$schema: "https://specs.letsflow.io/v0.2.0/scenario/schema.json#"
 title: A handshake
 
 actors:
@@ -40,7 +40,7 @@ states:
 {% tab title="JSON" %}
 ```javascript
 {
-    "$schema": "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#",
+    "$schema": "https://specs.letsflow.io/v0.2.0/scenario/schema.json#",
     "title": "A handshake",
     "actors": {
         "initiator": {
@@ -80,7 +80,7 @@ The _initiator_ will still _complete_ the process, but from the _initial_ state 
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-$schema: "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#"
+$schema: "https://specs.letsflow.io/v0.2.0/scenario/schema.json#"
 title: A handshake
 
 actors:
@@ -113,7 +113,7 @@ states:
 {% tab title="JSON" %}
 ```javascript
 {
-    "$schema": "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#",
+    "$schema": "https://specs.letsflow.io/v0.2.0/scenario/schema.json#",
     "title": "Basic user",
     "actors": {
         "initiator": {
@@ -191,7 +191,7 @@ While it's nice to _reply_, the recipient may also choose to _ignore_ the greeti
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-$schema: "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#"
+$schema: "https://specs.letsflow.io/v0.2.0/scenario/schema.json#"
 title: A handshake
 
 actors:
@@ -232,7 +232,7 @@ states:
 {% tab title="JSON" %}
 ```javascript
 {
-    "$schema": "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#",
+    "$schema": "https://specs.letsflow.io/v0.2.0/scenario/schema.json#",
     "title": "Basic user",
     "actors": {
         "initiator": {
@@ -383,7 +383,7 @@ When we run this test we can see that it fails. The _not good_ response hasn't b
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-$schema: "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#"
+$schema: "https://specs.letsflow.io/v0.2.0/scenario/schema.json#"
 title: A handshake
 
 actors:
@@ -447,7 +447,7 @@ states:
 {% tab title="JSON" %}
 ```javascript
 {
-    "$schema": "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#",
+    "$schema": "https://specs.letsflow.io/v0.2.0/scenario/schema.json#",
     "title": "A handshake",
     "actors": {
         "initiator": {
@@ -642,7 +642,7 @@ Instructions for a specific actor can be defined for each state. Again, this doe
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-$schema: "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#"
+$schema: "https://specs.letsflow.io/v0.2.0/scenario/schema.json#"
 title: A handshake
 
 actors:
@@ -730,7 +730,7 @@ states:
 {% tab title="JSON" %}
 ```javascript
 {
-    "$schema": "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#",
+    "$schema": "https://specs.letsflow.io/v0.2.0/scenario/schema.json#",
     "title": "A handshake",
     "actors": {
         "initiator": {

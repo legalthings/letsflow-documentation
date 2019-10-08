@@ -5,7 +5,7 @@
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-"$schema": https://specs.livecontracts.io/v0.2.0/action/nop/schema.json#
+"$schema": https://specs.letsflow.io/v0.2.0/action/nop/schema.json#
 actor: issuer
 default_response: approve
 trigger_response:
@@ -27,7 +27,7 @@ responses:
 {% tab title="JSON" %}
 ```javascript
 {
-  "$schema": "https://specs.livecontracts.io/v0.2.0/action/nop/schema.json#",
+  "$schema": "https://specs.letsflow.io/v0.2.0/action/nop/schema.json#",
   "actor": "issuer",
   "default_response": "approve",
   "trigger_response": {

@@ -27,7 +27,7 @@ Create file `scenario.yml` \(or `scenario.json`\) in the `basic` directory.
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-$schema: "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#"
+$schema: "https://specs.letsflow.io/v0.2.0/scenario/schema.json#"
 title: The basics
 ```
 {% endtab %}
@@ -37,7 +37,7 @@ title: The basics
 {% code-tabs-item title="scenario.json" %}
 ```javascript
 {
-    "$schema": "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#",
+    "$schema": "https://specs.letsflow.io/v0.2.0/scenario/schema.json#",
     "title": "The basics"
 }
 ```
@@ -53,7 +53,7 @@ title: The basics
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-$schema: "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#"
+$schema: "https://specs.letsflow.io/v0.2.0/scenario/schema.json#"
 title: The basics
 
 actors:
@@ -65,7 +65,7 @@ actors:
 {% tab title="JSON" %}
 ```javascript
 {
-    "$schema": "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#",
+    "$schema": "https://specs.letsflow.io/v0.2.0/scenario/schema.json#",
     "title": "The basics",
     "actors": {
         "initiator": {
@@ -90,7 +90,7 @@ All [actions](https://github.com/legalthings/letsflow-docs/tree/5e7119b40d462ce9
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-$schema: "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#"
+$schema: "https://specs.letsflow.io/v0.2.0/scenario/schema.json#"
 title: My first Live Contract
 
 actors:
@@ -107,7 +107,7 @@ actions:
 {% tab title="JSON" %}
 ```javascript
 {
-    "$schema": "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#",
+    "$schema": "https://specs.letsflow.io/v0.2.0/scenario/schema.json#",
     "title": "The basics",
     "actors": {
         "initiator": {
@@ -134,7 +134,7 @@ When a process is started, it's in the _initial_ [state](https://github.com/lega
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-$schema: "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#"
+$schema: "https://specs.letsflow.io/v0.2.0/scenario/schema.json#"
 title: My first Live Contract
 
 actors:
@@ -156,7 +156,7 @@ states:
 {% tab title="JSON" %}
 ```javascript
 {
-    "$schema": "https://specs.livecontracts.io/v0.2.0/scenario/schema.json#",
+    "$schema": "https://specs.letsflow.io/v0.2.0/scenario/schema.json#",
     "title": "Basic user",
     "actors": {
         "initiator": {
