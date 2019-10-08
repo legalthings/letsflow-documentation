@@ -1,4 +1,4 @@
-# API client libraries
+# Client libraries
 
 ## JavaScript
 

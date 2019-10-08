@@ -13,9 +13,8 @@
 ## REST API
 
 * [Authentication](rest-api/identity.md)
-* [Event Chain service](rest-api/event-chain-service.md)
-* [Workflow Engine](rest-api/workflow-engine.md)
-* [API client libraries](rest-api/api-client-libraries.md)
+* [API endpoints](rest-api/workflow-engine.md)
+* [Client libraries](rest-api/api-client-libraries.md)
 
 ## Reference
 
