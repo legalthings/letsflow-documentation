@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [Introduction](README.md)
 
 ## Tutorials
 
@@ -12,15 +12,13 @@
 
 ## REST API
 
-* [REST API](rest-api/rest-api/README.md)
-  * [Event Chain service](rest-api/rest-api/event-chain-service.md)
-  * [Workflow Engine](rest-api/rest-api/workflow-engine.md)
-  * [API client libraries](rest-api/rest-api/api-client-libraries.md)
-  * [Identity](rest-api/rest-api/identity.md)
+* [Authentication](rest-api/identity.md)
+* [Event Chain service](rest-api/event-chain-service.md)
+* [Workflow Engine](rest-api/workflow-engine.md)
+* [API client libraries](rest-api/api-client-libraries.md)
 
 ## Reference
 
-* [Live Contracts](reference/live-contracts.md)
 * [Workflow](reference/workflow.md)
 * [Scenario](reference/scenario/README.md)
   * [Actor](reference/scenario/actor.md)
@@ -37,5 +35,6 @@
 
 ## Advanced topics
 
+* [Distributed workflows](advanced-topics/distributed-workflows.md)
 * [Cryptography](advanced-topics/cryptography.md)
 
