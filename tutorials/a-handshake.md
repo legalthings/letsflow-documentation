@@ -17,7 +17,7 @@ Let's expand the scenario for a process where two actors greet each other. We st
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-$schema: "https://specs.letsflow.io/v0.2.0/scenario/schema.json#"
+schema: https://specs.letsflow.io/v0.3.0/scenario
 title: A handshake
 
 actors:
@@ -32,15 +32,15 @@ actions:
 
 states:
   initial:
-    action: complete
-    transition: :success
+    on: complete
+    goto: (success)
 ```
 {% endtab %}
 
 {% tab title="JSON" %}
 ```javascript
 {
-    "$schema": "https://specs.letsflow.io/v0.2.0/scenario/schema.json#",
+    "schema": "https://specs.letsflow.io/v0.3.0/scenario",
     "title": "A handshake",
     "actors": {
         "initiator": {
@@ -58,8 +58,8 @@ states:
     },
     "states": {
         "initial": {
-            "action": "complete",
-            "transition": ":success"
+            "on": "complete",
+            "goto": "(success)"
         }
     }
 }
@@ -80,7 +80,7 @@ The _initiator_ will still _complete_ the process, but from the _initial_ state 
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-$schema: "https://specs.letsflow.io/v0.2.0/scenario/schema.json#"
+schema: https://specs.letsflow.io/v0.3.0/scenario
 title: A handshake
 
 actors:
@@ -99,21 +99,21 @@ actions:
 
 states:
   initial:
-    action: greet
-    transition: wait_on_recipient
+    on: greet
+    goto: wait_on_recipient
   wait_on_recipient:
-    action: reply
-    transition: wait_on_initiator
+    on: reply
+    goto: wait_on_initiator
   wait_on_initiator:
-    action: complete
-    transition: :success
+    on: complete
+    goto: (success)
 ```
 {% endtab %}
 
 {% tab title="JSON" %}
 ```javascript
 {
-    "$schema": "https://specs.letsflow.io/v0.2.0/scenario/schema.json#",
+    "schema": "https://specs.letsflow.io/v0.3.0/scenario",
     "title": "Basic user",
     "actors": {
         "initiator": {
@@ -139,16 +139,16 @@ states:
     },
     "states": {
         "initial": {
-            "action": "greet",
-            "transition": "wait_on_recipient"
+            "on": "greet",
+            "goto": "wait_on_recipient"
         },
         "wait_on_recipient": {
-            "action": "reply",
-            "transition": "wait_on_initiator"
+            "on": "reply",
+            "goto": "wait_on_initiator"
         },
         "wait_on_initiator": {
-            "action": "complete",
-            "transition": ":success"
+            "on": "complete",
+            "goto": "(success)"
         }
     }
 }
@@ -191,7 +191,7 @@ While it's nice to _reply_, the recipient may also choose to _ignore_ the greeti
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-$schema: "https://specs.letsflow.io/v0.2.0/scenario/schema.json#"
+schema: https://specs.letsflow.io/v0.3.0/scenario
 title: A handshake
 
 actors:
@@ -212,27 +212,24 @@ actions:
 
 states:
   initial:
-    action: greet
-    transition: wait_on_recipient
+    on: greet
+    goto: wait_on_recipient
   wait_on_recipient:
-    actions:
-      - reply
-      - ignore
     transitions:
-      - action: reply
-        transition: wait_on_initiator
-      - action: ignore
-        transition: :cancelled
+      - on: reply
+        goto: wait_on_initiator
+      - on: ignore
+        goto: :cancelled
   wait_on_initiator:
-    action: complete
-    transition: :success
+    on: complete
+    goto: (success)
 ```
 {% endtab %}
 
 {% tab title="JSON" %}
 ```javascript
 {
-    "$schema": "https://specs.letsflow.io/v0.2.0/scenario/schema.json#",
+    "schema": "https://specs.letsflow.io/v0.3.0/scenario",
     "title": "Basic user",
     "actors": {
         "initiator": {
@@ -258,28 +255,24 @@ states:
     },
     "states": {
         "initial": {
-            "action": "greet",
-            "transition": "wait_on_recipient"
+            "on": "greet",
+            "goto": "wait_on_recipient"
         },
         "wait_on_recipient": {
-            "actions": [
-                "reply",
-                "ignore"
-            ],
             "transitions": [
                 {
-                    "action": "reply",
-                    "transition": "wait_on_initiator"
+                    "on": "reply",
+                    "goto": "wait_on_initiator"
                 },
                 {
-                    "action": "ignore",
-                    "transition": ":cancelled"
+                    "on": "ignore",
+                    "goto": "(cancelled)"
                 }
             ]
         },
         "wait_on_initiator": {
-            "action": "complete",
-            "transition": ":success"
+            "on": "complete",
+            "goto": "(success)"
         }
     }
 }
@@ -383,7 +376,7 @@ When we run this test we can see that it fails. The _not good_ response hasn't b
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-$schema: "https://specs.letsflow.io/v0.2.0/scenario/schema.json#"
+schema: https://specs.letsflow.io/v0.3.0/scenario
 title: A handshake
 
 actors:
@@ -411,43 +404,35 @@ actions:
 
 states:
   initial:
-    action: greet
-    transition: wait_on_recipient
+    on: greet
+    goto: wait_on_recipient
   wait_on_recipient:
-    actions:
-      - reply
-      - ignore
     transitions:
-      - action: reply
-        response: ok
-        transition: wait_on_initiator
-      - action: reply
-        response: not_good
-        transition: expect_sympathy
-      - action: ignore
-        transition: :cancelled
+      - on: reply.ok
+        goto: wait_on_initiator
+      - on: reply.not_good
+        goto: expect_sympathy
+      - on: ignore
+        goto: (cancelled)
   expect_sympathy:
-    actions:
-      - sympathize
-      - complete
     transitions:
-      - action: sympathize
-        transition: recipient_can_elaborate
-      - action: complete
-        transition: :success
+      - on: sympathize
+        goto: recipient_can_elaborate
+      - on: complete
+        goto: (success)
   recipient_can_elaborate:
-    action: elaborate
-    transition: wait_on_initiator
+    on: elaborate
+    goto: wait_on_initiator
   wait_on_initiator:
-    action: complete
-    transition: :success
+    on: complete
+    goto: (success)
 ```
 {% endtab %}
 
 {% tab title="JSON" %}
 ```javascript
 {
-    "$schema": "https://specs.letsflow.io/v0.2.0/scenario/schema.json#",
+    "schema": "https://specs.letsflow.io/v0.3.0/scenario",
     "title": "A handshake",
     "actors": {
         "initiator": {
@@ -616,16 +601,16 @@ Previous tests should be, of course, also modified.
 {% tab title="YAML" %}
 ```yaml
   recipient_can_elaborate:
-    action: elaborate
-    transition: expect_sympathy
+    on: elaborate
+    goto: expect_sympathy
 ```
 {% endtab %}
 
 {% tab title="JSON" %}
 ```javascript
         "recipient_can_elaborate": {
-            "action": "elaborate",
-            "transistion": "expect_sympathy"
+            "on": "elaborate",
+            "goto": "expect_sympathy"
         },
 ```
 {% endtab %}
@@ -642,7 +627,7 @@ Instructions for a specific actor can be defined for each state. Again, this doe
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-$schema: "https://specs.letsflow.io/v0.2.0/scenario/schema.json#"
+schema: https://specs.letsflow.io/v0.3.0/scenario
 title: A handshake
 
 actors:
@@ -730,7 +715,7 @@ states:
 {% tab title="JSON" %}
 ```javascript
 {
-    "$schema": "https://specs.letsflow.io/v0.2.0/scenario/schema.json#",
+    "schema": "https://specs.letsflow.io/v0.3.0/scenario",
     "title": "A handshake",
     "actors": {
         "initiator": {

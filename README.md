@@ -1,14 +1,12 @@
 ---
-description: >-
-  A workflow describes an orchestrated and repeatable pattern of business
-  activity.
+description: LetsFlow · the workflow engine developers love
 ---
 
 # Introduction
 
 ![](.gitbook/assets/colored.png)
 
-LetsFlow is a workflow engine for running business processes. A _process_ is modeled as a finite state machine, where an _action_, performed by an _actor_, causes a _state_ transition. The definition of a model is called the _scenario_.
+LetsFlow is a workflow engine for running processes, described in YAML or JSON.
 
 {% tabs %}
 {% tab title="YAML" %}
@@ -26,8 +24,8 @@ actions:
 
 states:
   initial:
-    action: complete
-    transition: :success
+    on: complete
+    goto: (success)
 ```
 {% endtab %}
 
@@ -49,7 +47,47 @@ states:
     "states": {
         "initial": {
             "action": "complete",
-            "transition": ":success"
+            "transition": "(success)"
+        }
+    }
+}
+```
+{% endtab %}
+
+{% tab title="JSON \(full\)" %}
+```javascript
+{
+    "$schema": "https://specs.letsflow.io/v0.3.0/scenario#",
+    "title": "My first scenario",
+    "actors": {
+        "user": {
+            "$schema": "https://specs.letsflow.io/v0.3.0/actor#",
+            "title": "user"
+        }
+    },
+    "actions": {
+        "complete": {
+            "title": "Complete the process",
+            "responses": {
+                "ok": {
+                    "title": null,
+                    "display": "always"
+                    "update": [ ]
+                }
+            }
+        }
+    },
+    "states": {
+        "initial": {
+            "actions": [
+                "complete"
+            ],
+            "transitions": [
+                {
+                    "on": "*.*"
+                    "goto": "(success)"
+                }
+            ]
         }
     }
 }
@@ -57,5 +95,5 @@ states:
 {% endtab %}
 {% endtabs %}
 
-
+The _scenario_ models a _process_ as a fine state machine. The _actors_ are persons, organizations or systems that are allowed to participate on the process by performing _actions_. Which actions can be performed depends of the current _state_ of the process. After an action has been, the process will transition to a different state.
 

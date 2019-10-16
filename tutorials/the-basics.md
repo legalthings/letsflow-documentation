@@ -27,7 +27,7 @@ Create file `scenario.yml` \(or `scenario.json`\) in the `basic` directory.
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-$schema: "https://specs.letsflow.io/v0.2.0/scenario/schema.json#"
+schema: "https://specs.letsflow.io/v0.2.0/scenario/schema.json#"
 title: The basics
 ```
 {% endtab %}
