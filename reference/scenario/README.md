@@ -68,7 +68,7 @@ If the supplier starts the process, the golden flow is
 {% tabs %}
 {% tab title="YAML" %}
 ```yaml
-$schema: "https://specs.letsflow.io/v0.2.0/scenario/schema.json#"
+schema: https://specs.letsflow.io/v0.3.0/scenario#
 id: JKdf3jddfklsr834s312
 title: Product quotation
 description: Send a quotation requested by the client
@@ -139,6 +139,9 @@ definitions:
         required: true
 
 actions:
+  comment:
+    $schema: "http://workflow.example.com/actions/comment/schema.json#"
+    actor: (any)
   request_quotation:
     $schema: "http://workflow.example.com/actions/form/schema.json#"
     actor: client
@@ -176,8 +179,7 @@ actions:
       error:
         display: always
         title: Failed to invite the supplier
-        description:
-          "<ref>": response.data.message
+        description: !ref response.data.message
   upload:
     $schema: "http://workflow.example.com/actions/upload/schema.json#"
     actor: supplier
@@ -204,52 +206,52 @@ actions:
     default_response: accept
 
 states:
-  ":initial":
-    actions:
-    - request_quotation
-    - enter_client
+  (any):
     transitions:
-    - action: request_quotation
-      transition: invite_supplier
-    - action: enter_client
-      transition: provide_quote
+      - on: comment
+        goto: (current)
+  initial:
+    transitions:
+      - on: request_quotation
+        goto: invite_supplier
+      - on: enter_client
+        goto: provide_quote
   invite_supplier:
-    action: invite_supplier
     transitions:
-    - response: ok
-      transition: wait_for_quote
-    - response: error
-      transition: ":failed"
+      - on: invite_supplier.ok
+        goto: wait_for_quote
+      - on: invite_supplier.error
+        goto: (failed)
   invite_client:
-    action: invite_client
     transitions:
-    - response: ok
-      transition: wait_for_review
+      - on: invite_client.ok
+        goto: wait_for_review
   wait_for_quote:
     title: Prepare quotation
     instructions:
       supplier: !tpl "{{ assets.request.description }} ({{ assets.request.urgency }} urgency)"
-    action: upload
     transitions:
-    - response: ok
-      transition: wait_for_review
+      - on: upload.ok
+        goto: wait_for_review
+      - on: upload.error
+        goto: (current)
   provide_quote:
     title: Provide quotation
-    action: upload
     transitions:
-    - response: ok
-      transition: invite_client          
+      - on: upload.ok
+        goto: wait_for_review
+      - on: upload.error
+        goto: (current)
   wait_for_review:
     title: Review quotation
     instructions:
       client: Please review and accept the quotation
       supplier: Please wait for the client to review the quotation.
-    action: review
     transitions:
-    - response: accept
-      transition: ":success"
-    - response: reject
-      transition: ":cancelled"
+      - on: review.accept
+        transition: (success)
+      - on: review.reject
+        transition: (cancelled)
 ```
 {% endtab %}
 
@@ -857,9 +859,9 @@ states:
 
 ## Scenario schema
 
-`https://specs.letsflow.io/v0.2.0/scenario/schema.json#`
+`https://specs.letsflow.io/v0.3.0/scenario#`
 
-### $schema
+### schema \(or $schema\)
 
 The Live Contracts Scenario [JSON schema](http://json-schema.org) URI that describes the JSON structure of the scenario.
 
