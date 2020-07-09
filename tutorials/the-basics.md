@@ -33,16 +33,14 @@ title: The basics
 {% endtab %}
 
 {% tab title="JSON" %}
-{% code-tabs %}
-{% code-tabs-item title="scenario.json" %}
+{% code title="scenario.json" %}
 ```javascript
 {
     "$schema": "https://specs.letsflow.io/v0.2.0/scenario/schema.json#",
     "title": "The basics"
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
@@ -190,8 +188,7 @@ To ensure the Live Contract behaves as expected, we need to create and run tests
 Create file `main.feature` in the `basic` directory.
 {% endhint %}
 
-{% code-tabs %}
-{% code-tabs-item title="main.feature" %}
+{% code title="main.feature" %}
 ```text
 Feature: Run a simple process that is completed in one step
 
@@ -204,8 +201,7 @@ Feature: Run a simple process that is completed in one step
     When "Joe" runs the "complete" action of the "main" process
     Then the "main" process is completed
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 We have a single identity named "Joe". The name is arbitrary, but used to keep the identities apart.
 
