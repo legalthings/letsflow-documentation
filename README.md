@@ -4,7 +4,7 @@ description: LetsFlow · the workflow engine developers love
 
 # Introduction
 
-![](.gitbook/assets/colored.png)
+![](.gitbook/assets/Colored.png)
 
 LetsFlow is a workflow engine for running processes, described in YAML or JSON.
 
@@ -54,7 +54,7 @@ states:
 ```
 {% endtab %}
 
-{% tab title="JSON \(full\)" %}
+{% tab title="JSON (full)" %}
 ```javascript
 {
     "$schema": "https://specs.letsflow.io/v0.3.0/scenario#",
@@ -104,4 +104,3 @@ _LetsFlow is developed by_
 ![](.gitbook/assets/logo-full-dark-gradient--m.png)
 
 [https://ltonetwork.com](https://ltonetwork.com)
-

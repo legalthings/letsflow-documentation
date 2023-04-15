@@ -10,7 +10,7 @@ description: Setup a node and run your first workflow.
 Create a directory named `letsflow-tutorial` with a subdirectory `basic`.
 {% endhint %}
 
-```text
+```
 $ mkdir letsflow-tutorial
 $ mkdir letsflow-tutorial/basic
 $ cd letsflow-tutorial
@@ -18,10 +18,10 @@ $ cd letsflow-tutorial
 
 ## Creating a scenario
 
-A Live Contract must contain of one or more [scenarios](https://github.com/legalthings/letsflow-docs/tree/5e7119b40d462ce903c4f7e2c396b0986e295a1b/full-node/workflow/scenario/README.md) that describes the process\(es\) we're automating. We can write a scenario in either JSON or YAML.
+A Live Contract must contain of one or more [scenarios](https://github.com/legalthings/letsflow-docs/tree/5e7119b40d462ce903c4f7e2c396b0986e295a1b/full-node/workflow/scenario/README.md) that describes the process(es) we're automating. We can write a scenario in either JSON or YAML.
 
 {% hint style="success" %}
-Create file `scenario.yml` \(or `scenario.json`\) in the `basic` directory.
+Create file `scenario.yml` (or `scenario.json`) in the `basic` directory.
 {% endhint %}
 
 {% tabs %}
@@ -46,7 +46,7 @@ title: The basics
 
 ### Defining actors
 
-[Actors](https://github.com/legalthings/letsflow-docs/tree/5e7119b40d462ce903c4f7e2c396b0986e295a1b/full-node/workflow/scenario/actor.md) are organizations or individuals play a role in the process. The scenario needs to define which actors \(may\) exist.
+[Actors](https://github.com/legalthings/letsflow-docs/tree/5e7119b40d462ce903c4f7e2c396b0986e295a1b/full-node/workflow/scenario/actor.md) are organizations or individuals play a role in the process. The scenario needs to define which actors (may) exist.
 
 {% tabs %}
 {% tab title="YAML" %}
@@ -189,7 +189,7 @@ Create file `main.feature` in the `basic` directory.
 {% endhint %}
 
 {% code title="main.feature" %}
-```text
+```
 Feature: Run a simple process that is completed in one step
 
   Background:
@@ -209,24 +209,19 @@ Joe initializes the Live Contract by creating a new chain and using our _basic_ 
 
 We need to specify which role Joe is going to have in the process. In this case he's the _initiator_ of the process.
 
-In the `Scenario` section _\(this is unrelated to the workflow scenario\)_, we state that will Joe performs the complete action. As defined in our workflow scenario, the process should transition from _initial_ to _:success_, which means the process has been completed successfully.
+In the `Scenario` section _(this is unrelated to the workflow scenario)_, we state that will Joe performs the complete action. As defined in our workflow scenario, the process should transition from _initial_ to _:success_, which means the process has been completed successfully.
 
 ### Running the Live contract tester
 
 `lctest` is a command line tool to test workflows described in a Live Contract. It requires PHP7+ with the yaml and mongodb PECL extensions. For more installation, please read [the installation guide](https://github.com/legalthings/letsflow-docs/tree/5e7119b40d462ce903c4f7e2c396b0986e295a1b/full-node/installation-guide/README.md).
 
-```text
-$ wget "https://github.com/legalthings/livecontracts-tester/raw/master/lctest.pharr"
+```
+$ wget "https://github.com/legalthings/workflow-tester/raw/master/lctest.phar"
 $ php lctest.phar basic
 ```
 
-The test should succeed, giving the following output:
-
-![](https://github.com/legalthings/letsflow-docs/tree/5e7119b40d462ce903c4f7e2c396b0986e295a1b/.gitbook/assets/screenshot-www.ostechnix.com-2019.05.07-00-34-49-2.png)
-
 ## Congratulations!
 
-You've successfully created and tested your first Live Contract.
+You've successfully created and tested your first workflow.
 
 ![](https://github.com/legalthings/letsflow-docs/tree/5e7119b40d462ce903c4f7e2c396b0986e295a1b/.gitbook/assets/sheep-clap.gif)
-
