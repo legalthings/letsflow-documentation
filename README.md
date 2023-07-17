@@ -96,11 +96,3 @@ states:
 {% endtabs %}
 
 The _scenario_ models a _process_ as a fine state machine. The _actors_ are persons, organizations or systems that are allowed to participate on the process by performing _actions_. Which actions can be performed depends on the current _state_ of the process. After an action has been, the process will transition to a different state.
-
-
-
-_LetsFlow is developed by_
-
-![](.gitbook/assets/logo-full-dark-gradient--m.png)
-
-[https://ltonetwork.com](https://ltonetwork.com)
