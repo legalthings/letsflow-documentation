@@ -4,7 +4,7 @@ description: LetsFlow · the workflow engine developers love
 
 # Introduction
 
-![](.gitbook/assets/Colored.png)
+![](.gitbook/assets/colored.png)
 
 LetsFlow is a workflow engine for running processes, described in YAML or JSON.
 
@@ -95,4 +95,4 @@ states:
 {% endtab %}
 {% endtabs %}
 
-The _scenario_ models a _process_ as a fine state machine. The _actors_ are persons, organizations or systems that are allowed to participate on the process by performing _actions_. Which actions can be performed depends on the current _state_ of the process. After an action has been, the process will transition to a different state.
+The _scenario_ models a _process_ as a fine-state machine. The _actors_ are persons, organizations or systems that are allowed to participate in the process by performing _actions_. Which actions can be performed depends on the current _state_ of the process. After an action has been, the process will transition to a different state.
